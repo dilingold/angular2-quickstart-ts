@@ -1,6 +1,6 @@
 export class Subscription {
   constructor(
-    public policyName: string,
+    public subName: string,
     public groupId: string,
     public sensorId: string) { }
 }

@@ -10,19 +10,33 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
+require('rxjs/add/operator/map');
 var Observable_1 = require('rxjs/Observable');
 var SubscriptionService = (function () {
     function SubscriptionService(http) {
         this.http = http;
-        this.subscriptionUrl = 'http://localhost:5002/CreatePolicy';
+        this.subscriptionUrl = 'http://localhost:5002/subscriptions';
     }
     SubscriptionService.prototype.getSubscriptions = function () {
         return this.http.get(this.subscriptionUrl)
-            .map(this.extractData);
+            .map(this.extractData)
+            .catch(this.handleError);
+    };
+    SubscriptionService.prototype.addSubscription = function (subName, groupId, sensorId) {
+        var body = JSON.stringify({ subName: subName, groupId: groupId, sensorId: sensorId });
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.post(this.subscriptionUrl, body, options)
+            .map(this.extractData)
+            .catch(this.handleError);
     };
     SubscriptionService.prototype.extractData = function (res) {
         var body = res.json();
-        return body.Policies || {};
+        return body.subscription || {};
+    };
+    SubscriptionService.prototype.extractData1 = function (res) {
+        var body = res.json();
+        return body || {};
     };
     SubscriptionService.prototype.handleError = function (error) {
         //In real world app use a remote logging infrastructure

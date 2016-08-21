@@ -14,7 +14,6 @@ var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_component_1 = require('./app.component');
 var app_routing_1 = require('./app.routing');
-var policies_component_1 = require('./policies.component');
 var homebuttons_component_1 = require("./homebuttons.component");
 var tabs_component_1 = require('./tabs.component');
 var tab_component_1 = require('./tab.component');
@@ -24,6 +23,7 @@ var manage_subscriptions_component_1 = require("./manage-subscriptions.component
 var apply_subscriptions_component_1 = require("./apply-subscriptions.component");
 var subscription_list_component_1 = require("./subscription-list.component");
 var subscription_service_1 = require('./subscription.service');
+var new_subscription_component_1 = require('./new-subscription.component');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -38,7 +38,6 @@ var AppModule = (function () {
             ],
             declarations: [
                 app_component_1.AppComponent,
-                policies_component_1.PoliciesComponent,
                 manage_subscriptions_component_1.ManageSubscriptionsComponent,
                 subscription_list_component_1.SubscriptionListComponent,
                 apply_subscriptions_component_1.ApplySubscriptionsComponent,
@@ -46,7 +45,8 @@ var AppModule = (function () {
                 tabs_component_1.TabsComponent,
                 tab_component_1.TabComponent,
                 home_component_1.HomeComponent,
-                setconfig_component_1.SetConfigComponent
+                setconfig_component_1.SetConfigComponent,
+                new_subscription_component_1.NewSubscriptionComponent
             ],
             providers: [
                 subscription_service_1.SubscriptionService,

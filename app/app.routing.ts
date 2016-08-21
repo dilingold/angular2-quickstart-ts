@@ -1,6 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import { PoliciesComponent } from './policies.component';
 import { VisualizationComponent } from './visualization.component';
 import { HomeComponent } from './home.component';
 import {ManageSubscriptionsComponent} from "./manage-subscriptions.component";
@@ -23,10 +22,6 @@ const appRoutes: Routes = [
     {
         path: 'apply-subscriptions',
         component: ApplySubscriptionsComponent
-    },
-    {
-        path: 'policies',
-        component: PoliciesComponent
     },
     {
         path: 'visualization',

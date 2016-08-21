@@ -1,7 +1,7 @@
 "use strict";
 var Subscription = (function () {
-    function Subscription(policyName, groupId, sensorId) {
-        this.policyName = policyName;
+    function Subscription(subName, groupId, sensorId) {
+        this.subName = subName;
         this.groupId = groupId;
         this.sensorId = sensorId;
     }

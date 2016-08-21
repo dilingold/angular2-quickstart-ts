@@ -6,7 +6,6 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent }  from './app.component';
 import { routing } from './app.routing';
 
-import { PoliciesComponent } from './policies.component';
 import { HomeButtonComponent } from "./homebuttons.component";
 import { TabsComponent } from './tabs.component';
 import { TabComponent } from './tab.component';
@@ -16,6 +15,7 @@ import {ManageSubscriptionsComponent} from "./manage-subscriptions.component";
 import {ApplySubscriptionsComponent} from "./apply-subscriptions.component";
 import {SubscriptionListComponent} from "./subscription-list.component";
 import { SubscriptionService } from './subscription.service';
+import { NewSubscriptionComponent } from './new-subscription.component';
 
 @NgModule({
   imports:      [
@@ -27,7 +27,6 @@ import { SubscriptionService } from './subscription.service';
   ],
   declarations: [
       AppComponent,
-      PoliciesComponent,
       ManageSubscriptionsComponent,
       SubscriptionListComponent,
       ApplySubscriptionsComponent,
@@ -35,7 +34,8 @@ import { SubscriptionService } from './subscription.service';
       TabsComponent,
       TabComponent,
       HomeComponent,
-      SetConfigComponent
+      SetConfigComponent,
+      NewSubscriptionComponent
   ],
     providers: [
         SubscriptionService,

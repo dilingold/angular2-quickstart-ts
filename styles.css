@@ -85,10 +85,6 @@ p {
     padding-bottom: 5px;
 }
 
-input {
-    display: none
-}
-
 label {
     display: inline-block;
     padding: 15px 25px;
@@ -99,11 +95,6 @@ label {
 label:hover {
     color: #fff;
     curser: pointer;
-}
-
-input:checked + label {
-    background: #333333;
-    color: #fff;
 }
 
 #tab1:checked ~ .content #content1,
